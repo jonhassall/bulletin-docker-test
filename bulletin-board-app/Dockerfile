@@ -23,6 +23,6 @@ CMD [ "npm", "start" ]
 COPY . .
 
 # Make and set permissions on storage dir
-RUN mkdir storage/
+RUN mkdir -p storage/
 RUN chmod -Rv g+rw storage/
 RUN chmod -Rv o+rw storage/

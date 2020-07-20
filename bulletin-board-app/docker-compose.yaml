@@ -4,6 +4,9 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile
+    restart: always
+    environment:
+      ENV_VARIABLE: testing1
     ports:
       - "80:80"
     volumes:

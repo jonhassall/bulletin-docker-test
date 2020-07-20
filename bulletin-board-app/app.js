@@ -8,6 +8,7 @@ new Vue({
 
   ready: function () {
     this.fetchEvents();
+    this.showVariable();
   },
 
   methods: {
@@ -49,6 +50,10 @@ new Vue({
             console.log(err);
           });
       }
+    },
+
+    showVariable: function () {
+      console.log('showVariable');
     }
   }
 });
