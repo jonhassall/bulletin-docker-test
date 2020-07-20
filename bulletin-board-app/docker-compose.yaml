@@ -18,6 +18,9 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: new_database
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: mypassword
 
   adminer:
     image: adminer
