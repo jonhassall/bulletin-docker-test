@@ -23,6 +23,7 @@ CMD [ "npm", "start" ]
 # Copy the rest of your app's source code from your host to your image filesystem.
 COPY . .
 
-# Set permissions on storage dir
+# Make and set permissions on storage dir
+RUN mkdir storage/
 RUN chmod -Rv g+rw storage/
 RUN chmod -Rv o+rw storage/
