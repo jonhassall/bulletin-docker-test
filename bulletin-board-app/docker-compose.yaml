@@ -8,7 +8,7 @@ services:
       - "80:80"
     volumes:
       - bulletin_storage:/home/web/app/storage
-      
+
   redis:
     image: "redis:alpine"
   
@@ -30,6 +30,7 @@ services:
     container_name: phpmyadmin
     environment:
      - PMA_ARBITRARY=1
+     - UPLOAD_LIMIT=256M
     restart: always
     ports:
      - 8081:80
